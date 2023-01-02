@@ -17,15 +17,17 @@ import { UserList } from "./Users/UserList"
 import { BlogList } from "./Blogs/BlogList"
 import { Description } from "./Blogs/Description"
 import ProductDisplay from "./Blogs/ProductDisplay"
+import Login from "./Login"
+import Protected from "./Protected"
 
 const App = () => {
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />}>
-          <Route index element={<HomePage />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="about" element={<About />} />
+          <Route index element={<Protected Component={HomePage} />} />
+          <Route path="contact" element={<Protected Component={Contact} />} />
+          <Route path="about" element={<Protected Component={About} />} />
           <Route path="users" element={<Users />}>
             <Route index element={<List />} />
             <Route path="save" element={<Save />} />
@@ -43,6 +45,7 @@ const App = () => {
             <Route path="description" element={<Description />} />
           </Route>
           <Route path="posts" element={<Posts />} />
+          <Route path="login" element={<Login/>}/>
         </Route>
       </Routes>
     </>

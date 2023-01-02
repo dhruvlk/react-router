@@ -11,6 +11,7 @@ const Home = () => {
         <Link to="/users">Users</Link>&nbsp;&nbsp;
         <Link to="/blogs">Blogs</Link>&nbsp;&nbsp;
         <Link to="/posts">Posts</Link>&nbsp;&nbsp;
+        <Link to="/login">Login</Link>&nbsp;&nbsp;
       </nav>
       <Outlet />
     </>
